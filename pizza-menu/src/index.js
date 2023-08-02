@@ -71,7 +71,7 @@ function Menu() {
     <>
       <main className="menu">
         <h2>Our menu</h2>
-        <div className="pizzas">
+        <ul className="pizzas">
           {pizzaData.map((pizza) => (
             <Pizza
               name={pizza.name}
@@ -81,16 +81,15 @@ function Menu() {
               price={pizza.price}
             />
           ))}
-        </div>
+        </ul>
       </main>
     </>
   );
 }
 function Pizza(props) {
-  console.log(props);
   return (
     <>
-      <div className="pizza">
+      <li className="pizza">
         <img src={props.photoName} alt={props.name} />
         <div>
           <h3>{props.name}</h3>
@@ -98,7 +97,7 @@ function Pizza(props) {
           <p>{props.soldOut ? "Sold Out" : "This Is Avalible!"}</p>
           <span>{props.price + 3}</span>
         </div>
-      </div>
+      </li>
     </>
   );
 }
