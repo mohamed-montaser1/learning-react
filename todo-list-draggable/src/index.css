@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+ul.drag-over {
+  background-color: rgb(255, 238, 0) !important;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #252525;
+  font-weight: 400;
+  background-color: #f7f2e9;
+  min-height: 100vh;
+  padding: 3.2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input-container .input {
+  height: 31px;
+  padding-inline: 0.5rem;
+  aspect-ratio: 10/1;
+  border: 2px solid rgb(30, 85, 235);
+  outline: none;
+}
+
+.input-container button {
+  height: 31px;
+  aspect-ratio: 2/1;
+  border: 2px solid rgb(30, 85, 235);
+  background-color: rgb(30, 85, 235);
+  color: white;
+  cursor: pointer;
+}
+
+.tasks-container {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  width: 100%;
+  gap: 3rem;
+}
+
+@media (max-width: 1038px) {
+  .tasks-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+.task-container {
+  min-height: 200px;
+}
+
+.task-container ul {
+  list-style: none;
+  background-color: rgb(204, 191, 16);
+  padding: 1.4rem;
+}
+
+.task-container li {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  height: auto;
+  min-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(110, 103, 4);
+  padding: 10px 20px;
+  user-select: none;
+}
+
+.task-container h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}

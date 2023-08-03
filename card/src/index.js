@@ -2,6 +2,99 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
+const skills = [
+  {
+    skill: "HTML-CSS",
+    level: "advanced",
+    color: "#0084ff",
+  },
+  {
+    skill: "JAVASCRIPT",
+    level: "advanced",
+    color: "#6d77ff",
+  },
+  {
+    skill: "SCSS",
+    level: "advanced",
+    color: "#0084ff",
+  },
+  {
+    skill: "BOOTSTRAP",
+    level: "advanced",
+    color: "orangered",
+  },
+  {
+    skill: "TAILWIND CSS",
+    level: "advanced",
+    color: "yellow",
+  },
+  {
+    skill: "MATERIAL UI",
+    level: "advanced",
+    color: "orange",
+  },
+  {
+    skill: "NODE JS / NPM",
+    level: "advanced",
+    color: "#a96dec",
+  },
+  {
+    skill: "GIT / GITHUB",
+    level: "advanced",
+    color: "#da581c",
+  },
+  {
+    skill: "WEBPACK",
+    level: "advanced",
+    color: "#0084ff",
+  },
+  {
+    skill: "REACT JS",
+    level: "advanced",
+    color: "#0084ff",
+  },
+  {
+    skill: "GRAPHQL",
+    level: "intermediate",
+    color: "#da581c",
+  },
+  {
+    skill: "TYPESCRIPT",
+    level: "advanced",
+    color: "#ec6ddb",
+  },
+  {
+    skill: "REDUX TOOLKIT",
+    level: "beginner",
+    color: "orange",
+  },
+  {
+    skill: "EXPRESS JS",
+    level: "advanced",
+    color: "#0084ff",
+  },
+  {
+    skill: "MONGODB",
+    level: "advanced",
+    color: "#a96dec",
+  },
+  {
+    skill: "JQUERY",
+    level: "advanced",
+    color: "#0084ff",
+  },
+  {
+    skill: "REDUX",
+    level: "beginner",
+    color: "yellow",
+  },
+  {
+    skill: "NEXT JS",
+    level: "intermediate",
+    color: "#0084ff",
+  },
+];
+
 function App() {
   return (
     <>
@@ -31,27 +124,22 @@ const Intro = () => {
     </>
   );
 };
+
 const SkillList = () => {
+  let skillsLevel = {
+    beginner: "👶",
+    intermediate: "👍",
+    advanced: "💪",
+  };
+  
   return (
     <div className="skill-list">
-      <Skill title="HTML-CSS 💪" bgColor="#0084ff" />
-      <Skill title="JAVASCRIPT 💪" bgColor="#6d77ff" />
-      <Skill title="SCSS 💪" bgColor="#0084ff" />
-      <Skill title="BOOTSTRAP 💪" bgColor="orangered" />
-      <Skill title="TAILWIND CSS 💪" bgColor="yellow" />
-      <Skill title="MATERIAL UI 💪" bgColor="orange" />
-      <Skill title="NODE JS / NPM 💪" bgColor="#a96dec" />
-      <Skill title="GIT / GITHUB 💪" bgColor="#da581c" />
-      <Skill title="WEBPACK 💪" bgColor="#0084ff" />
-      <Skill title="REACT JS 💪" bgColor="#0084ff" />
-      <Skill title="GRAPHQL 🔥" bgColor="#da581c" />
-      <Skill title="TYPESCRIPT 💪" bgColor="#ec6ddb" />
-      <Skill title="REDUX TOOLKIT 👶" bgColor="orange" />
-      <Skill title="EXPRESS JS 💪" bgColor="#0084ff" />
-      <Skill title="MONGODB 💪" bgColor="#a96dec" />
-      <Skill title="JQUERY 💪" bgColor="#0084ff" />
-      <Skill title="READUX 👶" bgColor="yellow" />
-      <Skill title="NEXT JS 👍" bgColor="orange" />
+      {skills.map((skill) => (
+        <Skill
+          title={`${skill.skill} ${skillsLevel[skill.level]}`}
+          bgColor={skill.color}
+        />
+      ))}
     </div>
   );
 };
