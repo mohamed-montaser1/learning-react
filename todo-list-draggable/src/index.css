@@ -74,13 +74,14 @@ h1 {
 }
 
 .task-container {
-  min-height: 200px;
+  min-height: 100px;
 }
 
 .task-container ul {
   list-style: none;
   background-color: rgb(204, 191, 16);
   padding: 1.4rem;
+  min-height: inherit;
 }
 
 .task-container li {

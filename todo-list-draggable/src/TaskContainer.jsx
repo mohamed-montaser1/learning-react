@@ -2,14 +2,14 @@ import List from "./List";
 import ListElement from "./ListElement";
 import useTodos from "./context/TodoContext";
 
-export default function TaskContainer() {
+export default function TaskContainer({ type }) {
   const { todos } = useTodos();
   return (
-    <div className="task-container active">
+    <div className={`task-container ${type}`}>
       <h3>Active</h3>
-      <List type={"active"}>
+      <List type={type}>
         {todos.map((todo) => {
-          if (todo.mode !== "active") return null;
+          if (todo.mode !== type) return null;
           return (
             <ListElement
               key={todo.id}
