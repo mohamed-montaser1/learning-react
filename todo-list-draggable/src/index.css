@@ -7,10 +7,6 @@
   font-family: "IBM Plex Mono", monospace;
 }
 
-ul.drag-over {
-  background-color: rgb(255, 238, 0) !important;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -104,4 +100,32 @@ h1 {
   color: black;
   margin-bottom: 20px;
   margin-top: 10px;
+}
+
+.task-container ul.active {
+  background-color: rgb(214, 214, 15);
+}
+.task-container ul.active.drag-over {
+  background-color: rgb(228, 228, 85);
+}
+.task-container ul.active li {
+  background-color: rgb(175, 175, 17);
+}
+.task-container ul.in-progress {
+  background-color: rgb(147, 53, 6);
+}
+.task-container ul.in-progress.drag-over {
+  background-color: rgb(214, 89, 26);
+}
+.task-container ul.in-progress li {
+  background-color: rgb(255, 85, 0);
+}
+.task-container ul.complated {
+  background-color: rgb(20, 161, 20);
+}
+.task-container ul.complated.drag-over {
+  background-color: rgb(20, 216, 20);
+}
+.task-container ul.complated li {
+  background-color: rgb(8, 209, 8);
 }

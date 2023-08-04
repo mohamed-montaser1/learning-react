@@ -35,6 +35,7 @@ export default function List({ children, type }) {
       onDragLeave={handleDragLeave}
       onDragOver={hanldeDragOver}
       onDrop={handleDrop}
+      className={type}
     >
       {children}
     </ul>
